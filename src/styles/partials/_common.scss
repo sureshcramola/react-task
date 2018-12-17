@@ -48,7 +48,9 @@ a:focus {
 button {
     cursor: pointer;
 }
-
+button:focus{
+    outline:none;
+}
 .h-100 {
     height: 100%;
 }
