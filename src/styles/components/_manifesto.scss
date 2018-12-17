@@ -1,0 +1,423 @@
+.banner-wrapper {
+    .top-img {
+        height: 428px;
+        width: 100%;
+        background: url('#{$assetPath}/banner.png') no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+    .banner-wrapper {
+        .top-img {
+            background: url('#{$assetPath}/banner-2x.png') no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+}
+
+.main-wrapper {
+    padding-top: 50px;
+}
+
+.manifesto-section {
+    width: 100%;
+    max-width: 940px;
+    margin: -305px auto 0;
+    border-radius: 4px;
+    background-color: $whiteBG;
+    min-height: 853px;
+    .top-section {
+        padding: 38px 58px 0;
+        flex: 1;
+        .read-more-btn {
+            min-width: 104px;
+            height: 24px;
+            color: $whiteTxtColor;
+            border-radius: 12px;
+            background-color: $greyBG;
+            border: 1px solid $greyBG;
+            line-height: 1;
+            margin-top: 10px;
+            font-size: $fontSizeSmall;
+            font-weight: $fontWeightRegular;
+        }
+        ul {
+            margin-top: 67px;
+            li {
+                border-radius: 2px;
+                border-bottom: 1px solid $lightGrey;
+                background: $lightBG;
+                padding: 11px 60px 9px 16px;
+                font-size: $fontSizeMedium;
+                font-weight: $fontWeightRegular;
+                color: $greyTxtColor;
+                &.no-line {
+                    border-bottom: none;
+                }
+            }
+        }
+        h1 {
+            img {
+                margin-right: 16px;
+                vertical-align: middle;
+            }
+            span {
+                flex: 1;
+            }
+        }
+    }
+    h1 {
+        color: $greyTxtColor;
+        font-size: $fontSizeXtraLarge;
+        font-weight: $fontWeightBold;
+        text-transform: uppercase;
+    }
+    p {
+        color: $greyTxtColor;
+        font-size: $fontSizeLarge;
+        font-family: $appFontFamily;
+        font-weight: $fontWeightRegular;
+        line-height: 29px;
+        margin-bottom: 0;
+    }
+    .category-row {
+        margin-left: -40px;
+        margin-right: -40px;
+        margin-top: -7px;
+    }
+    .column-4 {
+        padding-left: 40px;
+        padding-right: 40px;
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+    .category {
+        width: 100%;
+        max-width: 220px;
+        margin-top: 40px;
+        a {
+            padding: 22px 16px 25px;
+            display: block;
+            border: 1px solid $lightGrey;
+            border-radius: 2px;
+            text-decoration: none;
+            outline: none;
+            &:hover,
+            &:focus {
+                border-color: $categoryBorder;
+                @include transition(border 300ms ease-in);
+            }
+        }
+        span {
+            display: block;
+            font-size: $fontSizeLarge;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: $greyTxtColor;
+            &.icon-img {
+                height: 56.2px;
+            }
+        }
+    }
+    footer {
+        height: 89px;
+        background-color: $lightGrey;
+        padding: 0 40px 0 50px;
+        a {
+            font-size: $fontSizeSmall;
+            font-weight: $fontWeightMedium;
+            color: $greyTxtColor;
+            position: relative;
+            padding-left: 36px;
+            &::before {
+                content: '';
+                display: inline-block;
+                cursor: pointer;
+                background: url("#{$assetPath}/icons/arrow-back.svg") no-repeat;
+                background-size: 100% 100%;
+                width: 24px;
+                height: 24px;
+                top: -2px;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+    .share-btn {
+        position: relative;
+        font-size: $fontSizeSmall;
+        font-weight: $fontWeightRegular;
+        color: $linkTextColor;
+        cursor: pointer;
+        padding-left: 22px;
+        &::before {
+            content: '';
+            display: inline-block;
+            cursor: pointer;
+            background: url("#{$assetPath}/icons/share.svg") no-repeat;
+            background-size: 100% 100%;
+            width: 16px;
+            height: 16px;
+            top: 1px;
+            position: absolute;
+            left: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .banner-wrapper {
+        .top-img {
+            height: 350px;
+        }
+    }
+    .manifesto-section {
+        max-width: 650px;
+        margin-top: -220px;
+        .column-4 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .category {
+            max-width: 100%;
+        }
+        .top-section {
+            padding: 38px 40px 0;
+            ul {
+                li {
+                    font-size: $fontSizeSmall;
+                }
+            }
+        }
+        p {
+            font-size: $fontSizeMedium;
+            line-height: 25px;
+        }
+        h1 {
+            font-size: $fontSizeLarge + 2;
+        }
+        footer {
+            height: 60px;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .banner-wrapper .top-img {
+        display: none;
+    }
+    .manifesto-section {
+        margin-top: 0;
+        h1 {
+            font-size: $fontSizeLarge;
+            font-weight: $fontWeightMedium;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+        }
+        .rah-static{
+            position: relative;
+            .text-gradient {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                background-image: linear-gradient(to bottom, rgba(238, 238, 238, 0), $lightBG);
+                z-index: 0;
+            }
+        }
+        p {
+            font-size: $fontSizeSmall;
+            line-height: 20px;
+            // height: 80px;
+            overflow: hidden;
+            position: relative;
+            @include transition(all .3s ease-in-out);
+            
+            &.expanded {
+                height: auto;
+                
+            }
+        }
+        .top-section {
+            padding: 0;
+            order: 1;
+            &.bg-grey {
+                background-color: $lightGrey;
+            }
+            ul {
+                margin-top: 0;
+                li {
+                    font-weight: $fontWeightMedium;
+                    padding: 18px 16px 22px;
+                    border-radius: 0;
+                }
+            }
+            .manifesto-info {
+                background-color: $lightBG;
+                padding: 57px 26px 30px;
+                text-align: center;
+            }
+            .category-row {
+                margin-left: 25px;
+                margin-right: 25px;
+                margin-top: -1px;
+                .column-4 {
+                    &:first-child,
+                    &:nth-child(2) {
+                        .category a {
+                            border-top: 0;
+                            padding-top: 0;
+                        }
+                    }
+                    &:nth-child(odd) {
+                        .category a {
+                            padding-left: 10px;
+                            padding-right: 0;
+                            border-width: 1px 1px 0 0;
+                        }
+                    }
+                    &:nth-child(even) {
+                        .category a {
+                            padding-left: 26px;
+                            padding-right: 0;
+                            border-width: 1px 0 0 0;
+                        }
+                    }
+                }
+            }
+            .column-4 {
+                flex: 0 0 50%;
+                max-width: 50%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .category {
+                margin-top: 0;
+                max-width: 100%;
+                span {
+                    font-weight: $fontWeightRegular;
+                    text-transform: capitalize;
+                    &.icon-img {
+                        padding-top: 3px;
+                    }
+                }
+                a {
+                    border-radius: 0;
+                    height: 140px;
+                    display: flex;
+                    @include flex-direction(column);
+                    @include justify-content(center);
+                    &:hover,
+                    &:focus {
+                        border-color: $lightGrey;
+                    }
+                }
+            }
+        }
+        .mainifesto-section-details {
+            background: $whiteBG;
+            padding: 10px 16px 20px;
+            img {
+                margin-top: 5px;
+                margin-right: 11px;
+            }
+            h1 {
+                margin-bottom: 10px;
+            }
+            span.info-text {
+                font-size: $fontSizeSmall;
+                font-weight: $fontWeightRegular;
+                color: $greyTxtColor;
+                padding-bottom: 15px;
+                display: block;
+            }
+            .mainfesto-btn {
+                min-width: 120px;
+                background-color: $darkGrey;
+                border: 1px solid $darkGrey;
+                border-radius: 13px;
+                height: 25px;
+                font-size: $fontSizeSmall;
+                font-weight: $fontWeightRegular;
+                color: $greyTxtColor;
+                position: relative;
+                padding: 0 0 1px 13px;
+                margin-right: 20px;
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    cursor: pointer;
+                    background: url("#{$assetPath}/icons/resource-arrow.svg") no-repeat;
+                    background-size: 100% 100%;
+                    width: 12px;
+                    height: 12px;
+                    top: 6px;
+                    position: absolute;
+                    left: 10px;
+                }
+            }
+        }
+        footer {
+            height: auto;
+            padding: 10px 16px;
+            background: transparent;
+            a {
+                font-weight: $fontWeightRegular;
+                padding-left: 20px;
+                color: $linkTextColor;
+                &::before {
+                    width: 19px;
+                    height: 19px;
+                    top: 0;
+                    left: -3px;
+                }
+            }
+            .share-btn {
+                display: none;
+            }
+        }
+        .resources-wrapper {
+            padding: 19px 30px;
+            background: $lightGrey;
+            h3 {
+                font-size: $fontSizeMedium;
+                font-weight: $fontWeightMedium;
+                color: $greyTxtColor;
+            }
+            .resources-block {
+                margin-left: 4px;
+                &>div {
+                    margin-bottom: 15px;
+                }
+                .resource-thumb {
+                    width: 33px;
+                    height: 33px;
+                    background-color: $darkGrey;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    flex: 0 0 33px;
+                    cursor: pointer;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .resource-name {
+                    flex: 1;
+                    span {
+                        margin-left: 14px;
+                        color: $blueColor;
+                        font-size: $fontSizeSmall;
+                        font-weight: $fontWeightRegular;
+                        font-family: inherit;
+                        border-bottom: 1px dashed $blueColor;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

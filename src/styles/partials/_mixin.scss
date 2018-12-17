@@ -1,0 +1,108 @@
+@import "./variables";
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+// Flexbox display
+@mixin flexbox {
+	display: -webkit-box!important;
+	display: -webkit-flex!important;
+	display: -moz-flex!important;
+	display: -ms-flexbox!important;
+	display: flex!important;
+}
+
+@mixin inline-flex {
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -moz-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+}
+
+// The 'flex' shorthand
+// - applies to: flex items
+// <positive-number>, initial, auto, or none
+@mixin flex($values) {
+    -webkit-box-flex: $values!important;
+    -moz-box-flex: $values!important;
+    -webkit-flex: $values!important;
+    -ms-flex: $values!important;
+    flex: $values!important;
+}
+
+// Flex Flow Direction
+// - applies to: flex containers
+// row | row-reverse | column | column-reverse
+@mixin flex-direction($direction) {
+    -webkit-flex-direction: $direction!important;
+    -moz-flex-direction: $direction!important;
+    -ms-flex-direction: $direction!important;
+    flex-direction: $direction!important;
+}
+
+// Flex Line Wrapping
+// - applies to: flex containers
+// nowrap | wrap | wrap-reverse
+@mixin flex-wrap($wrap) {
+    -webkit-flex-wrap: $wrap!important;
+    -moz-flex-wrap: $wrap!important;
+    -ms-flex-wrap: $wrap!important;
+    flex-wrap: $wrap!important;
+}
+
+// Display Order
+// - applies to: flex items
+// <integer>
+@mixin order($val) {
+    -webkit-box-ordinal-group: $val!important;
+    -moz-box-ordinal-group: $val!important;
+    -ms-flex-order: $val!important;
+    -webkit-order: $val!important;
+    order: $val!important;
+}
+
+// Axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | space-between | space-around 
+@mixin justify-content($value: flex-start) {
+	@if $value == flex-start {
+		-webkit-box-pack: start;
+		-ms-flex-pack: start;
+	} @else if $value == flex-end {
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+	} @else if $value == space-between {
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+	} @else if $value == space-around {
+		-ms-flex-pack: distribute;		
+	} @else {
+		-webkit-box-pack: $value;
+		-ms-flex-pack: $value;
+	}
+	-webkit-justify-content: $value;
+	-moz-justify-content: $value;
+	justify-content: $value;
+}
+
+
+// Cross-axis Alignment
+@mixin align-items($align) {
+    -webkit-align-items: $align!important;
+    -moz-align-items: $align!important;
+    -ms-align-items: $align!important;
+    align-items: $align!important;
+}
+
+// Cross-axis Alignment
+@mixin align-self($align) {
+    -webkit-align-self: $align!important;
+    -moz-align-self: $align!important;
+    -ms-align-self: $align!important;
+    align-self: $align!important;
+}
